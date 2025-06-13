@@ -16,12 +16,10 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-import nextcord # use import nextcord for v1.2
+import nextcord
 from nextcord.ext import commands
 
-class Template(commands.Cog):
-    """A template cog written for unifier-plugin temmplate repo"""
-    
+class Welcomer(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
 
@@ -30,4 +28,4 @@ class Template(commands.Cog):
         await ctx.send('This is a template plugin!')
 
 def setup(bot):
-    bot.add_cog(Template(bot))
+    bot.add_cog(Welcomer(bot))
